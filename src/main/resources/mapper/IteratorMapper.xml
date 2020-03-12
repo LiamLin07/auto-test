@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liam.autotest.sys.dao.IteratorMapper">
+    <resultMap id="BaseResultMap" type="com.liam.autotest.sys.pojo.domain.Iterator">
+        <!--@mbg.generated-->
+        <!--@Table iterator-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="project_id" jdbcType="VARCHAR" property="projectId"/>
+        <result column="iterator_name" jdbcType="VARCHAR" property="iteratorName"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_user_id" jdbcType="BIGINT" property="createUserId"/>
+        <result column="create_name" jdbcType="VARCHAR" property="createName"/>
+        <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+        <result column="last_modify_user_id" jdbcType="BIGINT" property="lastModifyUserId"/>
+        <result column="last_modify_name" jdbcType="VARCHAR" property="lastModifyName"/>
+        <result column="last_modify_date" jdbcType="TIMESTAMP" property="lastModifyDate"/>
+        <result column="enabled" jdbcType="INTEGER" property="enabled"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, project_id, iterator_name, remark, create_user_id, create_name, create_date,
+        last_modify_user_id, last_modify_name, last_modify_date, enabled
+    </sql>
+    <select id="selectByIteratorListByPage" resultType="com.liam.autotest.sys.pojo.vo.IteratorListVO">
+        select i.id,i.project_id,p.project_name,i.iterator_name,i.remark,i.create_user_id,i.create_name,
+            i.create_date,i.last_modify_user_id,i.last_modify_name,i.last_modify_date
+        from iterator i
+                 left join project p on i.project_id = p.id
+    </select>
+</mapper>
