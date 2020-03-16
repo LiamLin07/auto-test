@@ -6,3 +6,6 @@ spring:
 logging:
   level:
     com.liam.autotest.sys.dao: trace
+server:
+  servlet:
+    context-path: /api

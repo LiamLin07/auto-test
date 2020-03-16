@@ -57,9 +57,9 @@ public class IteratorServiceImpl implements IteratorService {
         LambdaUpdateWrapper<Iterator> iteratorLambdaUpdateWrapper = Wrappers.<Iterator>lambdaUpdate();
         iteratorLambdaUpdateWrapper.eq(Iterator::getId, iteratorId)
                 .set(Iterator::getEnabled, EnabledEnum.DISABLE.getCode())
-                .set(Iterator::getLastModifyDate, now)
+                .set(Iterator::getLastModifyTime, now)
                 .set(Iterator::getLastModifyUserId, DefaultUser.userId)
-                .set(Iterator::getLastModifyName, DefaultUser.userName);
+                .set(Iterator::getLastModifyUserName, DefaultUser.userName);
 
         return iteratorMapper.update(null,iteratorLambdaUpdateWrapper);
     }

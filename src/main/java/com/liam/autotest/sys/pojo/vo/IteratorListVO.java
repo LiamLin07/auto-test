@@ -3,7 +3,9 @@ package com.liam.autotest.sys.pojo.vo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.liam.autotest.common.base.property.BasePropertyForm;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 
@@ -12,7 +14,8 @@ import java.util.Date;
  * @Date 2020/3/10
  */
 @Data
-public class IteratorListVO {
+@EqualsAndHashCode(callSuper = true)
+public class IteratorListVO extends BasePropertyForm {
     /**
      * 表id
      */
@@ -38,28 +41,4 @@ public class IteratorListVO {
      */
     private String remark;
 
-    /**
-     * 创建人id
-     */
-    private Long createUserId;
-    /**
-     * 创建人姓名
-     */
-    private String createName;
-    /**
-     * 创建日期
-     */
-    private Date createDate;
-    /**
-     * 最后修改人id
-     */
-    private Long lastModifyUserId;
-    /**
-     * 最后修改人姓名
-     */
-    private String lastModifyName;
-    /**
-     * 最后修改时间
-     */
-    private Date lastModifyDate;
 }

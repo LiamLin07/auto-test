@@ -16,13 +16,13 @@ public class BasePropertyPOUtil {
 
         // 创建信息
         baseProperty.setCreateUserId(userId);
-        baseProperty.setCreateName(userName);
-        baseProperty.setCreateDate(now);
+        baseProperty.setCreateUserName(userName);
+        baseProperty.setCreateTime(now);
 
         // 修改信息
         baseProperty.setLastModifyUserId(userId);
-        baseProperty.setLastModifyName(userName);
-        baseProperty.setLastModifyDate(now);
+        baseProperty.setLastModifyUserName(userName);
+        baseProperty.setLastModifyTime(now);
         baseProperty.setEnabled(EnabledEnum.ENABLE.getCode());
     }
 
@@ -30,16 +30,16 @@ public class BasePropertyPOUtil {
         Date now = new Date();
         // 修改信息
         baseProperty.setLastModifyUserId(userId);
-        baseProperty.setLastModifyName(userName);
-        baseProperty.setLastModifyDate(now);
+        baseProperty.setLastModifyUserName(userName);
+        baseProperty.setLastModifyTime(now);
     }
 
     public static <T extends BasePropertyPO> void delete(T baseProperty, Long userId, String userName) {
         Date now = new Date();
         // 删除信息
         baseProperty.setLastModifyUserId(userId);
-        baseProperty.setLastModifyName(userName);
-        baseProperty.setLastModifyDate(now);
+        baseProperty.setLastModifyUserName(userName);
+        baseProperty.setLastModifyTime(now);
         baseProperty.setEnabled(EnabledEnum.ENABLE.getCode());
     }
 

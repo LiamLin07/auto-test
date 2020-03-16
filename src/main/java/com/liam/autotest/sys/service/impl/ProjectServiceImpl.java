@@ -54,8 +54,8 @@ public class ProjectServiceImpl implements ProjectService {
         }
         LambdaUpdateWrapper<Project> projectUpdateWrapper = Wrappers.<Project>lambdaUpdate();
         projectUpdateWrapper.set(Project::getEnabled, EnabledEnum.DISABLE.getCode())
-                .set(Project::getLastModifyDate, new Date())
-                .set(Project::getLastModifyName, DefaultUser.userName)
+                .set(Project::getLastModifyTime, new Date())
+                .set(Project::getLastModifyUserName, DefaultUser.userName)
                 .set(Project::getLastModifyUserId, DefaultUser.userId)
                 .eq(Project::getId, id);
 

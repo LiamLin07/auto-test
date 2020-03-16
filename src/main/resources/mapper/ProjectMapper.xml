@@ -8,16 +8,16 @@
     <result column="project_name" jdbcType="VARCHAR" property="projectName" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="create_user_id" jdbcType="BIGINT" property="createUserId" />
-    <result column="create_name" jdbcType="VARCHAR" property="createName" />
-    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_user_name" jdbcType="VARCHAR" property="createUserName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="last_modify_user_id" jdbcType="BIGINT" property="lastModifyUserId" />
-    <result column="last_modify_name" jdbcType="VARCHAR" property="lastModifyName" />
-    <result column="last_modify_date" jdbcType="TIMESTAMP" property="lastModifyDate" />
+    <result column="last_modify_user_name" jdbcType="VARCHAR" property="lastModifyUserName" />
+    <result column="last_modify_time" jdbcType="TIMESTAMP" property="lastModifyTime" />
     <result column="enabled" jdbcType="INTEGER" property="enabled" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, project_name, remark, create_user_id, create_name, create_date, last_modify_user_id, 
-    last_modify_name, last_modify_date, enabled
+    id, project_name, remark, create_user_id, create_user_name, create_time, last_modify_user_id, 
+    last_modify_user_name, last_modify_time, enabled
   </sql>
 </mapper>
